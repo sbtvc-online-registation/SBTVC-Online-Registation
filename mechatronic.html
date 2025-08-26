@@ -77,48 +77,6 @@
                 </div>
             </div>
                             
-                            <!-- Science-Based System Counter -->
-                            <div class="counter-box bg-white rounded-lg p-5 border border-indigo-200 shadow-sm">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <h4 class="text-lg font-semibold text-gray-800">ระบบฐานวิทย์(ปวช.)</h4>
-                                        <p class="text-sm text-gray-600 mt-1">จำนวนผู้สมัครปัจจุบัน</p>
-                                    </div>
-                                    <div class="text-right">
-                                        <div class="text-4xl font-bold text-yellow-600 counter-number" id="science-information-counter">กำลังดาวน์โหลด</div>
-                                        <p class="text-sm text-gray-500">จากเป้าหมาย 10 คน</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <script>
-                            const url ="https://script.google.com/macros/s/AKfycbxb_gWhCC0gGgnlNlNxNm3ziwRUori2N5A7GTXim8GbKRm1s8VjrNmomox0Td6wWQg/exec?sheet=สาขาวิชาเทคโนโลยีคอมพิวเตอร์และสารสนเทศ";
-
-                            fetch(url)
-                             .then(res => res.json())
-                             .then(data => {
-                              document.getElementById("science-information-counter").innerText = data.count_pvoc;
-                            })
-                            .catch(err => {
-                              console.error("Error:", err);
-                            });
-                            </script><script>
-                            fetch("https://script.google.com/macros/s/AKfycbxb_gWhCC0gGgnlNlNxNm3ziwRUori2N5A7GTXim8GbKRm1s8VjrNmomox0Td6wWQg/exec?sheet=สาขาวิชาเทคโนโลยีคอมพิวเตอร์และสารสนเทศ")
-                            .then(res => res.json())
-                            .then(data => {
-                            console.log("ได้ข้อมูล:", data);
-                           document.getElementById("science-information-counter").innerText = data.count_pvoc;
-                           })
-                             .catch(err => console.error("โหลดข้อมูลไม่สำเร็จ:", err));
-                        </script>
-                        
-                        <div class="mt-6 text-center">
-                            <p class="text-gray-600">อัพเดทล่าสุด: <span class="font-medium" id="last-updated">15 มีนาคม 2567 เวลา 14:30 น.</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Left Column - Department Information -->
                 <div class="lg:col-span-1">
