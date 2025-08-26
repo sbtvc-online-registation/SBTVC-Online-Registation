@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สมัครเรียนออนไลน์ - วิทยาลัยอาชีวศึกษาเทคโนโลยีฐานวิทยาศาสตร์(ชลบุรี)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRjxoTvT4mcjFO5CGdPiCJA4AsPxvbvIMw&s" rel="icon">
-  <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRjxoTvT4mcjFO5CGdPiCJA4AsPxvbvIMw&s" rel="apple-touch-icon">
+    <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRjxoTvT4mcjFO5CGdPiCJA4AsPxvbvIMw&s" rel="apple-touch-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         body {
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             background-color: #f0f5ff;
         }
         .program-card {
@@ -28,17 +29,29 @@
 <body>
     <div class="min-h-screen">
         <!-- Header -->
-        <header class="bg-yellow-500 text-white">
-            <div class="container mx-auto px-4 py-6 flex items-center flex-col md:flex-row">
-                <!-- Logo -->
-                <div class="mr-4 flex-shrink-0 mb-4 md:mb-0">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRjxoTvT4mcjFO5CGdPiCJA4AsPxvbvIMw&s" alt="SBTVC Logo" class="h-16 w-16 rounded-full shadow-lg">
+        <header class="bg-yellow-500 text-white shadow-lg header-animation">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo and College Name -->
+                <div class="flex items-center">
+                    <div class="mr-6 flex-shrink-0">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRjxoTvT4mcjFO5CGdPiCJA4AsPxvbvIMw&s" alt="SBTVC Logo" class="h-16 w-16 rounded-full shadow-lg">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">วิทยาลัยอาชีวศึกษาเทคโนโลยีฐานวิทยาศาสตร์</h1>
+                        <p class="text-orange-100 mt-1 text-lg">Science Based Technology Vocational College (Chonburi)</p>
+                    </div>
                 </div>
-                <!-- College Name -->
-                <div class="text-center md:text-left">
-                    <h1 class="text-2xl md:text-3xl font-bold">วิทยาลัยอาชีวศึกษาเทคโนโลยีฐานวิทยาศาสตร์(ชลบุรี)</h1>
-                    <p class="text-orange-100 mt-1">Science Based Technology Vocational College (Chonburi)</p>
-                </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="flex items-center space-x-3 justify-center md:justify-end px-4 py-2">
+                <!-- Contact Button -->
+                <a href="contact.html" class="bg-white text-yellow-500 hover:bg-yellow-50 px-4 py-2 rounded-lg font-medium transition-colors duration-300 flex items-center shadow-md">
+                <svg class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                ติดต่อเรา
+                </a>
                 <!-- Home-->
                 <div class="h-10 w-10 ml-auto mt-4 md:mt-0">
                     <a href="index.html" class="home-link">
@@ -60,6 +73,48 @@
                     <div class="absolute inset-0 bg-yellow-500 opacity-70"></div>
                     <div class="absolute inset-0 flex items-center justify-center">
                         <h2 class="text-4xl font-bold text-white">แผนกเมคคาทรอนิกส์</h2>
+                    </div>
+                </div>
+            </div>
+                            
+                            <!-- Science-Based System Counter -->
+                            <div class="counter-box bg-white rounded-lg p-5 border border-indigo-200 shadow-sm">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-gray-800">ระบบฐานวิทย์(ปวช.)</h4>
+                                        <p class="text-sm text-gray-600 mt-1">จำนวนผู้สมัครปัจจุบัน</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-4xl font-bold text-yellow-600 counter-number" id="science-information-counter">กำลังดาวน์โหลด</div>
+                                        <p class="text-sm text-gray-500">จากเป้าหมาย 10 คน</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            const url ="https://script.google.com/macros/s/AKfycbxb_gWhCC0gGgnlNlNxNm3ziwRUori2N5A7GTXim8GbKRm1s8VjrNmomox0Td6wWQg/exec?sheet=สาขาวิชาเทคโนโลยีคอมพิวเตอร์และสารสนเทศ";
+
+                            fetch(url)
+                             .then(res => res.json())
+                             .then(data => {
+                              document.getElementById("science-information-counter").innerText = data.count_pvoc;
+                            })
+                            .catch(err => {
+                              console.error("Error:", err);
+                            });
+                            </script><script>
+                            fetch("https://script.google.com/macros/s/AKfycbxb_gWhCC0gGgnlNlNxNm3ziwRUori2N5A7GTXim8GbKRm1s8VjrNmomox0Td6wWQg/exec?sheet=สาขาวิชาเทคโนโลยีคอมพิวเตอร์และสารสนเทศ")
+                            .then(res => res.json())
+                            .then(data => {
+                            console.log("ได้ข้อมูล:", data);
+                           document.getElementById("science-information-counter").innerText = data.count_pvoc;
+                           })
+                             .catch(err => console.error("โหลดข้อมูลไม่สำเร็จ:", err));
+                        </script>
+                        
+                        <div class="mt-6 text-center">
+                            <p class="text-gray-600">อัพเดทล่าสุด: <span class="font-medium" id="last-updated">15 มีนาคม 2567 เวลา 14:30 น.</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
