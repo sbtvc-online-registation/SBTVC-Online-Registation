@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สมัครเรียนออนไลน์ - วิทยาลัยอาชีวศึกษาเทคโนโลยีฐานวิทยาศาสตร์(ชลบุรี)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRjxoTvT4mcjFO5CGdPiCJA4AsPxvbvIMw&s" rel="icon">
     <link href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRjxoTvT4mcjFO5CGdPiCJA4AsPxvbvIMw&s" rel="apple-touch-icon">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         body {
-            font-family: 'Sarabun', sans-serif;
+            font-family: 'Kanit', sans-serif;
             background-color: #f0f5ff;
         }
         .program-card {
@@ -24,69 +24,34 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.856);
         }
-        .modal {
-            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-            backdrop-filter: blur(5px);
-        }
-        .modal-container {
-            transform: scale(0.95);
-            transition: transform 0.3s ease;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
-        .modal.active {
-            visibility: visible;
-            opacity: 1;
-        }
-        .modal.active .modal-container {
-            transform: scale(1);
-        }
-        .status-bar {
-            background: linear-gradient(90deg, #141E30 0%, #243B55 100%);
-        }
-        .form-input {
-            transition: all 0.3s ease;
-        }
-        .form-input:focus {
-            border-color: #8E54E9;
-            box-shadow: 0 0 0 3px rgba(142, 84, 233, 0.2);
-        }
-        .hero-image {
-            background: linear-gradient(135deg, rgba(71, 118, 230, 0.8) 0%, rgba(142, 84, 233, 0.8) 100%), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23ffffff" fill-opacity="0.2" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E');
-            background-size: cover;
-            background-position: center;
-        }
-        .testimonial-card {
-            transition: all 0.3s ease;
-        }
-        .testimonial-card:hover {
-            transform: translateY(-3px);
-        }
-        .feature-icon-1 {
-            background: linear-gradient(135deg, #43CBFF 0%, #9708CC 100%);
-        }
-        .feature-icon-2 {
-            background: linear-gradient(135deg, #FFCC33 0%, #FF6666 100%);
-        }
-        .feature-icon-3 {
-            background: linear-gradient(135deg, #00F260 0%, #0575E6 100%);
-        }
     </style>
 </head>
 <body>
     <div class="min-h-screen">
         <!-- Header -->
-        <header class="bg-orange-500  text-white">
-            <div class="container mx-auto px-4 py-6 flex items-center flex-col md:flex-row">
-                <!-- Logo -->
-                <div class="mr-4 flex-shrink-0 mb-4 md:mb-0">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRjxoTvT4mcjFO5CGdPiCJA4AsPxvbvIMw&s" alt="SBTVC Logo" class="h-16 w-16 rounded-full shadow-lg">
+        <header class="bg-orange-500 text-white shadow-lg header-animation">
+        <div class="container mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo and College Name -->
+                <div class="flex items-center">
+                    <div class="mr-6 flex-shrink-0">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKRjxoTvT4mcjFO5CGdPiCJA4AsPxvbvIMw&s" alt="SBTVC Logo" class="h-16 w-16 rounded-full shadow-lg">
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">วิทยาลัยอาชีวศึกษาเทคโนโลยีฐานวิทยาศาสตร์</h1>
+                        <p class="text-orange-100 mt-1 text-lg">Science Based Technology Vocational College (Chonburi)</p>
+                    </div>
                 </div>
-                <!-- College Name -->
-                <div class="text-center md:text-left">
-                    <h1 class="text-2xl md:text-3xl font-bold">วิทยาลัยอาชีวศึกษาเทคโนโลยีฐานวิทยาศาสตร์(ชลบุรี)</h1>
-                    <p class="text-orange-100 mt-1">Science Based Technology Vocational College (Chonburi)</p>
-                </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="flex items-center space-x-3 justify-center md:justify-end px-4 py-2">
+                <!-- Contact Button -->
+                <a href="contact.html" class="bg-white text-orange-500 hover:bg-orange-50 px-4 py-2 rounded-lg font-medium transition-colors duration-300 flex items-center shadow-md">
+                <svg class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                ติดต่อเรา
+                </a>
                 <!-- Home-->
                 <div class="h-10 w-10 ml-auto mt-4 md:mt-0">
                     <a href="index.html" class="home-link">
