@@ -76,6 +76,52 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Application Statistics -->
+            <div class="mb-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="bg-yellow-500 text-white py-3 px-4">
+                        <h3 class="text-xl font-semibold">สถิติการสมัคร</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Science-Based System Counter -->
+                            <div class="counter-box bg-white rounded-lg p-5 border border-indigo-200 shadow-sm">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="text-lg font-semibold text-gray-800">ระบบฐานวิทย์(ปวช.)</h4>
+                                        <p class="text-sm text-gray-600 mt-1">จำนวนผู้สมัครปัจจุบัน</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-4xl font-bold text-yellow-600 counter-number" id="science-electric-counter">กำลังดาวน์โหลด</div>
+                                        <p class="text-sm text-gray-500">จากเป้าหมาย 10 คน</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            const url = "https://script.google.com/macros/s/AKfycbxb_gWhCC0gGgnlNlNxNm3ziwRUori2N5A7GTXim8GbKRm1s8VjrNmomox0Td6wWQg/exec?sheet=สาขาวิชาเทคโนโลยีเมคคาทรอนิกส์และระบบควบคุมอัตโนมัติ";
+
+                            fetch(url)
+                             .then(res => res.json())
+                             .then(data => {
+                              document.getElementById("science-electric-counter").innerText = data.count_pvoc;
+                            })
+                            .catch(err => {
+                              console.error("Error:", err);
+                            });
+                            </script><script>
+                            fetch("https://script.google.com/macros/s/AKfycbxb_gWhCC0gGgnlNlNxNm3ziwRUori2N5A7GTXim8GbKRm1s8VjrNmomox0Td6wWQg/exec?sheet=สาขาวิชาเทคโนโลยีเมคคาทรอนิกส์และระบบควบคุมอัตโนมัติ")
+                            .then(res => res.json())
+                            .then(data => {
+                            console.log("ได้ข้อมูล:", data);
+                           document.getElementById("science-electric-counter").innerText = data.count_pvoc;
+                           })
+                             .catch(err => console.error("โหลดข้อมูลไม่สำเร็จ:", err));
+                        </script>
+                    </div>
+                </div>
+            </div>
                             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Left Column - Department Information -->
@@ -152,35 +198,6 @@
                         </div>
                         <div class="p-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <!-- Application Form - Regular System -->
-                                <div class="image-frame bg-white rounded-lg overflow-hidden">
-                                    <div class="relative h-64 bg-yellow-100 flex items-center justify-center">
-                                        <svg class="h-24 w-24 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                        </svg>
-                                        <div class="absolute inset-0 bg-yellow-600 opacity-10"></div>
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="font-semibold text-lg text-gray-800 mb-2">ใบสมัครระบบปกติ(ปวช.)</h4>
-                                        <p class="text-gray-600 mb-4">สำหรับผู้สมัครเข้าศึกษาในระบบปกติ ประจำปีการศึกษา 2567</p>
-                                        <div class="flex space-x-2">
-                                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeh3Wi6vapVzfqw15W3G2UzGWPQYrYv1-mC7g0kU0FI2AxLpQ/viewform?usp=dialog" target="_blank" class="btn-hover flex-1 bg-yellow-500 hover:bg-yellow-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center">
-                                                <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                                </svg>
-                                                สมัคร
-                                            </a>
-                                            <a href="#" class="btn-hover flex-1 bg-yellow-400 hover:bg-yellow-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center">
-                                                <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                                </svg>
-                                                ดูตัวอย่าง
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
                                 <!-- Application Form - Science-Based System -->
                                 <div class="image-frame bg-white rounded-lg overflow-hidden">
                                     <div class="relative h-64 bg-yellow-100 flex items-center justify-center">
