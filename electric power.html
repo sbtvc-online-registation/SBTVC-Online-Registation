@@ -104,75 +104,6 @@
                     </div>
                     <div class="p-6">
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <!-- Regular System Counter (ปวช.) -->
-                            <div class="counter-box bg-white rounded-lg p-5 border border-blue-200 shadow-sm">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <h4 class="text-lg font-semibold text-gray-800">ระบบปกติ (ปวช.)</h4>
-                                        <p class="text-sm text-gray-600 mt-1">จำนวนผู้สมัครปัจจุบัน</p>
-                                    </div>
-                                    <div class="text-right">
-                                        <div class="text-4xl font-bold text-blue-700 counter-number" id="regular-counter">กำลังดาวน์โหลด</div>
-                                        <p class="text-sm text-gray-500">จากเป้าหมาย 50 คน</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <script>
-                            const url = "https://script.google.com/macros/s/AKfycbwKp29s9I9Jta5uu8J665FP4VNfk0lSz3ONHDcnAg6jEQyL6X7LI3kXTm89pfCCDcGKxA/exec";
-
-                            fetch(url)
-                             .then(res => res.json())
-                             .then(data => {
-                              document.getElementById("regular-counter").innerText = data.count_pvoc;
-                            })
-                            .catch(err => {
-                              console.error("Error:", err);
-                            });
-                            </script><script>
-                            fetch("https://script.google.com/macros/s/AKfycbwKp29s9I9Jta5uu8J665FP4VNfk0lSz3ONHDcnAg6jEQyL6X7LI3kXTm89pfCCDcGKxA/exec")
-                            .then(res => res.json())
-                            .then(data => {
-                            console.log("ได้ข้อมูล:", data);
-                           document.getElementById("regular-counter").innerText = data.count_pvoc;
-                           })
-                             .catch(err => console.error("โหลดข้อมูลไม่สำเร็จ:", err));
-                             </script>
-  
-                            
-                            <!-- Regular System Counter (ปวส.) -->
-                            <div class="counter-box bg-white rounded-lg p-5 border border-teal-200 shadow-sm">
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        <h4 class="text-lg font-semibold text-gray-800">ระบบปกติ (ปวส.)</h4>
-                                        <p class="text-sm text-gray-600 mt-1">จำนวนผู้สมัครปัจจุบัน</p>
-                                    </div>
-                                    <div class="text-right">
-                                        <div class="text-4xl font-bold text-blue-700 counter-number" id="regular-diploma-counter">กำลังดาวน์โหลด</div>
-                                        <p class="text-sm text-gray-500">จากเป้าหมาย 50 คน</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <script>
-                            const url = "https://script.google.com/macros/s/AKfycbzaNYUf-cVL_fi3kHjzhlsaMMJeFgE-8aGsG395mQmpGoZWCueM1n72my9GqqBhyxSxiw/exec";
-
-                            fetch(url)
-                             .then(res => res.json())
-                             .then(data => {
-                              document.getElementById("regular-diploma-counter").innerText = data.count_pvoc;
-                            })
-                            .catch(err => {
-                              console.error("Error:", err);
-                            });
-                            </script><script>
-                            fetch("https://script.google.com/macros/s/AKfycbzaNYUf-cVL_fi3kHjzhlsaMMJeFgE-8aGsG395mQmpGoZWCueM1n72my9GqqBhyxSxiw/exec")
-                            .then(res => res.json())
-                            .then(data => {
-                            console.log("ได้ข้อมูล:", data);
-                           document.getElementById("regular-diploma-counter").innerText = data.count_pvoc;
-                           })
-                             .catch(err => console.error("โหลดข้อมูลไม่สำเร็จ:", err));
-                             </script>
-                            
                             <!-- Science-Based System Counter -->
                             <div class="counter-box bg-white rounded-lg p-5 border border-indigo-200 shadow-sm">
                                 <div class="flex items-center justify-between">
@@ -295,41 +226,6 @@
                         </div>
                         <div class="p-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <!-- Application Form - Regular System -->
-                                <div class="image-frame bg-white rounded-lg overflow-hidden">
-                                    <div class="relative h-64 bg-gray-100 flex items-center justify-center">
-                                        <svg class="h-24 w-24 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                        </svg>
-                                        <div class="absolute inset-0 bg-blue-600 opacity-10"></div>
-                                    </div>
-                                    <div class="p-4">
-                                        <h4 class="font-semibold text-lg text-gray-800 mb-2">ใบสมัครระบบปกติ(ปวช.-ปวส.)</h4>
-                                        <p class="text-gray-600 mb-4">สำหรับผู้สมัครเข้าศึกษาในระบบปกติ ประจำปีการศึกษา 2567</p>
-                                        <div class="flex space-x-2">
-                                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfIJjmdsr22iAAvgpqV_W-o1a0lxsvIOzaSvJbF4W-l7LWh3w/viewform?usp=dialog" target="_blank" class="btn-hover flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center">
-                                                <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                                </svg>
-                                                สมัคร(ปวช.)
-                                            </a>
-                                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScrAwh392UmTgrCIsPYH_VDwBsq8EDar44js96DGPT94wUY2w/viewform?usp=dialog" target="_blank" class="btn-hover flex-1 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center">
-                                                <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                                </svg>
-                                                สมัคร(ปวส.)
-                                            </a>
-                                            <a href="image.html" target="_blank" class="btn-hover flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg flex items-center justify-center">
-                                                <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                                </svg>
-                                                ดูตัวอย่าง
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                
                                 <!-- Application Form - Science-Based System -->
                                 <div class="image-frame bg-white rounded-lg overflow-hidden">
                                     <div class="relative h-64 bg-gray-100 flex items-center justify-center">
